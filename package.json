@@ -1,0 +1,46 @@
+{
+  "name": "yt-dlp-tui",
+  "version": "0.1.0",
+  "description": "Keyboard-first terminal YouTube downloader powered by yt-dlp & Ink",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "yt-dlp-tui": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "yt-dlp",
+    "youtube",
+    "downloader",
+    "tui",
+    "cli",
+    "ink",
+    "terminal",
+    "mp3",
+    "mp4"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.tsx",
+    "build": "tsup src/index.tsx --format esm --platform node --target node22 --out-dir dist --clean",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "ink": "^5.2.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
