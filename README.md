@@ -99,7 +99,7 @@ You can edit download destination paths inside the app by pressing `s` on the da
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/yt-dlp-tui.git
+git clone https://github.com/Adhithya0109DEV/yt-dlp-tui.git
 cd yt-dlp-tui
 
 # Install dependencies
